@@ -4,7 +4,7 @@
    рассмотреных методов работы со строками. */
 
 fun main(args: Array<String>) {
-
+/*
     val a: Byte = -10
     val b: Short = 45
     val c: Int = -250
@@ -68,7 +68,8 @@ fun main(args: Array<String>) {
 Выход из программы по вводу "0". Используйте массив*/
 
     val cannals = arrayOf("Выход из программы", "Первый канал", "Второй каннал", "Третьий каннал", "Четвёртый каннал")
-    println(cannals[2])
+    println(cannals[0])
+    */
 
     /*2.5 С помощью оператора switch и циклов реализуйте программу, которая выводит меню:
     * 1. Ввести имя
@@ -81,5 +82,43 @@ fun main(args: Array<String>) {
 информацию: "Имя: введеное имя, Фамилия: введеное фамилия, г.р.: введенный год"
 При вызове нулевого пункта программа завершает работу*/
 
+    val cannals = arrayOf("0. Выход", "1. Ввести имя", "2. Ввести фамилию", "3. Ввести год рождения", "4. Ввести информацию")
+
+    for (information in cannals){
+        println(information)
+    }
+
+    print("Выберете пункт: ")
+    var choice = readLine()!!.toInt()
+
+    /*val name = readLine()
+    val surname = readLine()
+    val birthday = readLine()!!.toInt()*/
+
+    when (choice) {
+        0 -> if (choice==0) {
+            print("Завершение программы")}
+        1 -> if (choice==1) {
+            print("Ввести имя: ")
+            val name = readLine()
+            print("Ваше имя: $name")}
+        2 -> if (choice==2) {
+            print("Ввести фамилию: ")
+            val surname = readLine()
+            print("Ваше фамилия: $surname")}
+        3 -> if (choice==3) {
+            print("Ввести год рождения: ")
+            val birthday = readLine()
+            print("Ваше год рождения: $birthday")}
+        4 -> if (choice==4) {
+            print("Ввести имя: ")
+            val name = readLine()
+            print("Ввести фамилию: ")
+            val surname = readLine()
+            print("Ввести год рождения: ")
+            val birthday = readLine()
+            print("Имя: введеное имя: $name, Фамилия: $surname, г.р.: $birthday")
+        }
+    }
 
 }
