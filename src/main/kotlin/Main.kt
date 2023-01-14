@@ -4,7 +4,7 @@
    рассмотреных методов работы со строками. */
 
 fun main(args: Array<String>) {
-/*
+
     val a: Byte = -10
     val b: Short = 45
     val c: Int = -250
